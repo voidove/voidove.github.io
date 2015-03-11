@@ -212,7 +212,8 @@ footer {
  *
  * @author olivia.wang
  * --------------------------------- */
-.image-avatar {
-  background-image: "../media/images/2015/03/11/avatar.jpg";
-  margin: 10px 0;
-}
+  article .post img {
+    max-width: 800px;
+    display: block;
+    text-align: left;
+    margin: .5em auto; }
