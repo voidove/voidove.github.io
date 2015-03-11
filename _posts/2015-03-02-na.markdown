@@ -9,6 +9,4 @@ tags:
   - summicron-dr
 ---
 
-[![](/media/files/2015/03/01/pic.jpg)](https://www.flickr.com/photos/lhzhang/16134724228/)
-
 取名真是件麻烦的事情
