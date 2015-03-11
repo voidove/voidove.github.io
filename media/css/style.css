@@ -205,3 +205,13 @@ footer {
     color: #dd1144; }
   .like-wrapper .like-button.liked:hover {
     color: #999; }
+
+
+
+/*------------------------------------
+ *
+ * @author olivia.wang
+ * --------------------------------- */
+.image-avatar {
+  margin: 10px 0;
+}

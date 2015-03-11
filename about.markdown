@@ -3,7 +3,9 @@ title: About me
 layout: page
 ---
 
+<div class="image-avatar" >
 ![Text]({{site.url}}/media/images/2015/03/11/avatar.jpg)
+</div>
 
 IT江湖微不足道一码农，兴趣广泛，无一事精。
 
