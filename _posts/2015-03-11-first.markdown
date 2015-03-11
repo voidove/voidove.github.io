@@ -3,10 +3,7 @@ title: untitled
 layout: post
 guid: urn:uuid:050de99c-7597-49a3-9281-9ca84fccbb5b
 tags:
-  - photography
-  - leica
-  - m6
-  - summicron-dr
+  - jug-jug
 ---
 
-取名真是件麻烦的事情
+我很懒，还没开始写。
