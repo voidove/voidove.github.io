@@ -1,0 +1,106 @@
+---
+title: untitled
+layout: post
+guid: urn:uuid:bb6aa1c5-6b98-430f-bde4-e218ffafdc29
+tags:
+  - 技术工具
+---
+
+公司项目集体搬迁到git上来，记录下学习过程。
+
+### 1 git 安装
+
+下载<a title="msysgit" href="http://msysgit.github.io/" target="_blank">Git For Windows</a>
+
+双击exe文件，一路next；“Windows Explorer integration”打勾，选择“Advanced context menu”（不选的话，鼠标右键，不会有git选项），然后一路next，安装成功。
+
+
+### 2 git 配置
+
+1) 配置SSH
+
+进入git bash，输入下面命令：
+<pre>ssh-keygen -t rsa -C "your_email@youremail.com"</pre>
+用默认的一路回车，成功后会在<code>C:\Documents and Settings\user</code>下生成.ssh文件，用编辑器打开.ssh/id_rsa.pub文件，复制key。
+
+回到gitlab网站，进入profile settings，点Add SSH Key，粘贴Key，title不用管。
+
+验证是否成功，在git bash下输入：
+<pre>ssh -T git@xx.com</pre>
+如果是第一次，会提示是否continue，输入yes会看到"welcome XX"，成功连上。
+
+2) 配置用户信息
+
+git每次提交都会记录username和Email，需要设置一下：
+<pre>git config --global user.name "your name"
+git config --global user.email "your_email@youremail.com"</pre>
+完成后，
+<pre>git config --list</pre>
+查看当前的git配置列表。
+
+### 3 基本操作
+
+1) git clone 获取项目
+
+leader已经在远端init好了一个仓库，我们只需clone啦
+<pre>git clone git@git.xx.com.cn:xx.git</pre>
+2) git branch 查看仓库分支
+
+git branch -r 查看远端仓库分支
+git branch 查看本地仓库分支
+<pre>git branch -r 
+origin/master
+origin/development</pre>
+我们有两条分支，master上是可以发布的正式稳定版本；development是用于开发的分支。
+
+`git push origin branch-name ` 推送本地分支到远程
+`git push origin :branch-name` 删除远程分支
+
+3) git checkout development 切换到开发分支
+
+4) git add 添加文件到缓存
+
+在本地dev分支的项目根目录下添加<strong>.gitignore</strong>文件。我们是java web项目，需要过滤eclipse配置文件和编译后的class文件。
+.gitignore文件内容如下：
+<pre># eclipse setting
+.settings/
+.project
+.classpath
+
+# Compiled
+build/classes/</pre>
+之后添加gitignore文件到缓存
+<pre>git add .gitignore</pre>
+5) git status
+
+接上一步，用<code>git status</code>查看当前文件状态,结果如下：
+<pre>$ git status
+# On branch development
+# Changes to be commited:
+#  &lt;use "git reset HEAD ..." to unstage&gt;
+#           new file: .ignore
+#</pre>
+可以看到提示信息，"Changes to be commited"。
+
+6) git commint
+<pre>git commit –a –m “hello this is my comment”</pre>
+接上一步，提交本次修改。
+
+7) git push
+<pre>git push origin development</pre>
+将本地仓库所做的修改提交到远端dev分支上
+
+8) git pull
+
+从远端仓库提取数据并尝试合并到当前分支, 相当于<code>git fetch</code>后紧接着<code>git merge</code>
+
+9) git rm
+
+下一篇：#2
+
+<span style="color: #000000;"><strong>参考资料：</strong></span>
+
+<a href="http://www.ruanyifeng.com/blog/2012/07/git.html" target="_blank">Git分支管理策略</a>
+<a href="http://wuyuans.com/2012/05/github-simple-tutorial/" target="_blank">github简单使用教程</a>
+<a href="http://git.oschina.net/progit/" target="_blank">Git 参考手册</a>
+<a href="https://help.github.com/" target="_blank">GitHub Help</a>
