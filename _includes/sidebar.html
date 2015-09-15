@@ -1,0 +1,35 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+	
+  <div class="sidebar-item">
+	  <img src="{{baseurl}}/media/images/olivia-avatar.jpg">
+    <p>{{ site.tagline }}</p>
+
+	  <a class="webicon facebook" href="https://facebook.com/danyal.zia.k">Facebook</a>
+	  <a class="webicon linkedin" href="https://linkedin.com/pub/danyal-zia">LinkedIn</a>
+	  <a rel="author" class="webicon googleplus" href="https://plus.google.com/+DanyalZia?rel=author">Google+</a>
+	  <a class="webicon tumblr" href="http://danyalzia.tumblr.com">Tumblr</a>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+
+    {% comment %}
+      The code below dynamically generates a sidebar nav of pages with
+      `layout: page` in the front-matter. See readme for usage.
+    {% endcomment %}
+
+	<a rel=”author” class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ baseurl }}/about">About</a>
+	<a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ baseurl }}/archive">Archive</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      Copyrights &copy; {{ site.time | date: '%Y' }} Olivia Wang.
+    </p>
+  </div>
+</div>

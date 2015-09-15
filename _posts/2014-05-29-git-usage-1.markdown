@@ -1,9 +1,0 @@
----
-title: voidove
-layout: post
-guid: urn:uuid:bb6aa1c5-6b98-430f-bde4-e218ffafdc29
-tags:
-  - hello
----
-
-[请移步](https://github.com/voidove/jug-jug/issues)

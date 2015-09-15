@@ -1,24 +1,30 @@
-markdown: rdiscount
-highlighter: pygments
-permalink: /:year/:month/:day/:title.html
-name: "Six Pence"
-markdown: rdiscount
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
 
-author: "olivia"
-atom-baseurl: "http://voidove.github.io/"
-disqus: "gopherwood"
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+        
+# Setup
+title:               Olivia Wang
+tagline:             'A freelance software developer and writer.'
+description:         "Danyal Zia's thoughts on software development, personal development and writing."
+url:                 http://voidove.github.io/
+baseurl:             /
+avatar:				 media/images/olivia-avatar.jpg
+paginate:            5
+locale:         	 en_us
 
-navigations:
-  - title: Archive
-    class: fa fa-list-ul
-    href: /archive.html
-  - title: Tags
-    class: fa fa-tags
-    href: /tags.html
-  - title: About
-    class: fa fa-user
-    href: /about.html
-  - title: Subscribe
-    class: fa fa-rss
-    href: /atom.xml
+# About/contact
+author:
+  name:              Olivia Wang
+  email:             oliviawang1208@hotmail.com
+fb_admins:      	 http://facebook.com/danyal.zia.k
+fb_appid:       	 337414769782635
 
+gems:
+  - jekyll-sitemap
+  - jekyll-redirect-from

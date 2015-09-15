@@ -1,0 +1,8 @@
+.firstcharacter {
+	float: left;
+	font-size: 95px;
+	line-height: 60px;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-left: 3px;
+}
