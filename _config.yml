@@ -10,8 +10,8 @@ relative_permalinks: true
         
 # Setup
 title:               Olivia Wang
-tagline:             'A freelance software developer and writer.'
-description:         "Danyal Zia's thoughts on software development, personal development and writing."
+tagline:             'A web developer, love reading and walking.'
+description:         "say hi"
 url:                 http://voidove.github.io/
 baseurl:             /
 avatar:				 media/images/olivia-avatar.jpg

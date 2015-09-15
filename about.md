@@ -14,7 +14,5 @@ IT江湖微不足道一码农，兴趣广泛，无一事精。
 希望，此处只言片语给你此感。
 
 
-## more
-* [weibo](http://weibo.com/voidove)
-
 ## contact
+oliviawang1208@hotmail.com
